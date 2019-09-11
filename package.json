@@ -5,8 +5,8 @@
   "main": "main.js",
   "dependencies": {
     "knex": "^0.19.4",
-    "onoff": "^4.1.4",
-    "sqlite3": "^4.1.0"
+    "sqlite3": "^4.1.0",
+    "wiringpi-node": "^2.4.4"
   },
   "devDependencies": {},
   "scripts": {
