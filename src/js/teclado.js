@@ -1,4 +1,5 @@
 const wpi = require("wiringpi-node")
+
 wpi.setup("gpio")
 
 wpi.pinMode(26, wpi.OUTPUT)
@@ -63,4 +64,3 @@ imprime_linha_coluna = (x, y) => {
 }
 
 const timerWatcher = setInterval(watcher, 100)
-	
