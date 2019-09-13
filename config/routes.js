@@ -1,7 +1,7 @@
 const admin = require('./admin')
 
 module.exports = app => {
-    app.post('/insertadmin', app.api.admin.save)
+    app.post('/insertadmin', app.api.administrador.save)
     app.post('/signin', app.api.auth.signin)
     
     app.all(app.config.passport.authenticate())
