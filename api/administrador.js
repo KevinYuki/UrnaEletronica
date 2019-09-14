@@ -3,16 +3,16 @@ const bcrypt = require('bcrypt')
 module.exports = app => {
     
     const encryptPassword = password => {
-        const salt = bcrypt.genSalt(10)
+        const salt = bcrypt.genSaltSync(10)
         return bcrypt.hashSync(password, salt)
     }
 
-    const save = async(req, res) => {
+    const save = async (req, res) => {
         const admin = { ...req.body }
 
         const table = await app.db('admin').first()
 
-        if(table.id) return res.status(403).send(err)
+        if(table) return res.status(403).send("Admin já cadastrado")
 
         admin.password = encryptPassword(admin.password)
 

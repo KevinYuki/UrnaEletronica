@@ -1,12 +1,13 @@
 module.exports = app => {
-    const save = async (req, res) => {
+    const save = (req, res) => {
         const candidato = { ...req.body }
-        if(req.params.num_candidato) candidato.num_candidato = req.params.num_candidato
 
-        if(candidato.num_candidato) {
+        const update = req.method === 'PUT'? true : false
+
+        if(update) {
             app.db('candidato')
                 .update(candidato)
-                .where({num_candidato: candidato.num_candidato})
+                .where( {num_candidato: candidato.num_candidato} )
                 .then(_ => res.status(204).send())
                 .catch(err => res.status(500).send(err))
         } else {
@@ -20,7 +21,7 @@ module.exports = app => {
     const getById = (req, res) => {
         app.db('candidato')
             .select('num_candidato', 'nome', 'nome_sup', 'partido', 'cargo', 'cidade', 'estado')
-            .where({ num_candidato: req.params.num_candidato })
+            .where({ num_candidato: req.params.num_candidato }).first()
             .then(candidato => res.json(candidato))
             .catch(err => res.status(500).send(err))
     }

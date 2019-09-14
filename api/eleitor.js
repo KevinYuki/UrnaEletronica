@@ -1,5 +1,5 @@
 module.exports = app => {
-    const save = async (req, res) => {
+    const save = (req, res) => {
         const eleitor = { ...req.body }
         if(req.params.id) eleitor.id = req.params.id
 
@@ -20,7 +20,7 @@ module.exports = app => {
     const getById = (req, res) => {
         app.db('eleitor')
             .select('*')
-            .where({ id: req.params.id })
+            .where({ id: req.params.id }).first()
             .then(eleitor => res.json(eleitor))
             .catch(err => res.status(500).send(err))
     }

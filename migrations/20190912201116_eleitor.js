@@ -1,7 +1,8 @@
 
 exports.up = function(knex) {
     return knex.schema.createTable('eleitor', table => {
-        table.string('cpf').primary()
+        table.increments('id').primary()
+        table.string('cpf').notNull()
         table.string('nome_completo').notNull().unique()
         table.string('cidade').notNull()
         table.string('estado').notNull()

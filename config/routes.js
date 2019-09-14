@@ -1,4 +1,4 @@
-const admin = require('./admin')
+// const admin = require('./admin')
 
 module.exports = app => {
     app.post('/insertadmin', app.api.administrador.save)
@@ -6,32 +6,32 @@ module.exports = app => {
     
     app.route('/auditoria')
         .all(app.config.passport.authenticate())
-        .get(admin(app.api.auditoria.get))
+        .get(app.api.auditoria.get)
 
     app.route('/votos')
         .all(app.config.passport.authenticate())
-        .get(admin(app.api.voto.save))
+        .post(app.api.voto.save)
     
     app.route('/eleitores')
         .all(app.config.passport.authenticate())
-        .post(admin(app.api.eleitor.save))
-        .get(admin(app.api.eleitor.get))
+        .post(app.api.eleitor.save)
+        .get(app.api.eleitor.get)
 
     app.route('/eleitores/:id')
         .all(app.config.passport.authenticate())
-        .put(admin(app.api.eleitor.save))
-        .get(admin(app.api.eleitor.getById))
-        .delete(admin(app.api.eleitor.remove))
+        .put(app.api.eleitor.save)
+        .get(app.api.eleitor.getById)
+        .delete(app.api.eleitor.remove)
         
     app.route('/candidatos')
         .all(app.config.passport.authenticate())
-        .post(admin(app.api.candidato.save))
-        .get(admin(app.api.candidato.get))
+        .post(app.api.candidato.save)
+        .get(app.api.candidato.get)
 
-    app.route('/candidatos/:id')
+    app.route('/candidatos/:num_candidato')
         .all(app.config.passport.authenticate())
-        .put(admin(app.api.candidato.save))
-        .get(admin(app.api.candidato.getById))
-        .delete(admin(app.api.candidato.remove))
+        .put(app.api.candidato.save)
+        .get(app.api.candidato.getById)
+        .delete(app.api.candidato.remove)
 
 }
