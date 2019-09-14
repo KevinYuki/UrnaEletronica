@@ -4,11 +4,13 @@ module.exports = app => {
     app.post('/insertadmin', app.api.administrador.save)
     app.post('/signin', app.api.auth.signin)
     
-    app.all(app.config.passport.authenticate())
-        .get(admin('/auditoria', app.api.auditoria.get))
+    app.route('/auditoria')
+        .all(app.config.passport.authenticate())
+        .get(admin(app.api.auditoria.get))
 
-    app.all(app.config.passport.authenticate())
-        .get(admin('/votos', app.api.voto.save))
+    app.route('/votos')
+        .all(app.config.passport.authenticate())
+        .get(admin(app.api.voto.save))
     
     app.route('/eleitores')
         .all(app.config.passport.authenticate())
