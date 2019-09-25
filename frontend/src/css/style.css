@@ -13,8 +13,12 @@ html, body {
     font-family: "Lato";
 }
 
-.panel {
+.bg-panel {
+    background-color: #eee;
     border-radius: 10px;
+}
+
+.panel {
     position: absolute;
     top: 0;
     left: 0;
@@ -22,7 +26,6 @@ html, body {
     bottom: 0;
     width: 500px;
     height: 300px;
-    background-color: #eee;
     padding: 10px;
     display: grid;
     grid-template-rows: .2fr .01fr .69fr .1fr;
