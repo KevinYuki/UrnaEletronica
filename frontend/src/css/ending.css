@@ -1,0 +1,12 @@
+h1.ending {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    font-size: 140px;
+    height: 200px;
+    width: 400px;
+    text-align: center;
+}
