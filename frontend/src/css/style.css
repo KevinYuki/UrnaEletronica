@@ -13,12 +13,9 @@ html, body {
     font-family: "Lato";
 }
 
-.bg-panel {
+.panel {
     background-color: #eee;
     border-radius: 10px;
-}
-
-.panel {
     position: absolute;
     top: 0;
     left: 0;
@@ -26,6 +23,10 @@ html, body {
     bottom: 0;
     width: 500px;
     height: 300px;
+    margin: auto;
+}
+
+.panel-login {
     padding: 10px;
     display: grid;
     grid-template-rows: .2fr .01fr .69fr .1fr;
@@ -37,49 +38,49 @@ html, body {
         "button"
 }
 
-.panel .head {
+.panel-login .head {
     grid-area: head
 }
 
-.panel hr {
+.panel-login hr {
     grid-area: hr;
     color: black;
     margin: 0;
 }
 
-.panel .login {
+.panel-login .login {
     grid-area: login;
     width: 280px;
     display: grid;
-    margin: auto auto;
+    margin: auto;
     grid-template-rows: 1fr;
     grid-template-columns: .2fr .8fr;
     grid-template-areas: 
     "labels inputs";
 }
 
-.panel .button {
+.panel-login .button-login {
     grid-area: button
 }
 
-.panel .login .inputs{
+.panel-login .login .inputs{
     text-align: center;
     grid-area: inputs
 }
 
-.panel .login .labels{
+.panel-login .login .labels{
     text-align: left;
     grid-area: labels;
 }
 
-.panel .login .labels label {
+.panel-login .login .labels label {
     display: block;
 }
 
-.panel .button input
+.panel-login .button-login input
 {
     width: 100px;
-    height: 40px;
+    height: 50px;
     position: absolute;
     left: 0;
     right: 0;
