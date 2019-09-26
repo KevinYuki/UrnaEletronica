@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Urna Eletrônica - Votação</title>
+    <link rel="stylesheet" href="../css/deps.min.css">
+    <link rel="stylesheet" href="../css/app.min.css">
+</head>
+
+<body>
+    <div class="panel panel-voting">
+        <div class="head">
+            <h1 class="h2 text-center">Seu voto para <span class="font-weight-bold">PRESIDENTE</span>:</h1>
+        </div>
+        <div class="labels ml-4">
+            <span>ID: </span>
+            <span>Número: </span>
+            <span>Nome: </span>
+            <span>Partido: </span>
+            <span>Vice-Presidente: </span>
+        </div>
+        <div class="inputs">
+            <input type="number" name="id_eleitor">
+            <div class="numbers">
+                <input type="number" name="number_1" id="">
+                <input type="number" name="number_2" id="">
+            </div>
+            <span>Fulano</span>
+            <span>PF</span>
+            <span>Ciclano</span>
+        </div>
+        <div class="image">
+            <img src="../img/president_icon.jpg" class="img-fluid w-75">
+        </div>
+        <div class="buttons d-flex justify-content-around">
+            <input type="button" class="btn btn-white" value="Branco">
+            <input type="button" class="btn btn-redo" value="Corrige">
+            <input type="button" class="btn btn-success" value="Confirma">
+        </div>
+    </div>
+</body>
+
+</html>

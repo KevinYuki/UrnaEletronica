@@ -1,0 +1,74 @@
+.btn-white {
+    background-color: white;
+    box-shadow: 0 9px #999 !important;
+    border-color: #333
+}
+
+.btn-white:hover {
+    background-color: #eee;
+}
+
+.btn-white:active {
+    box-shadow: 0 5px #555 !important;
+}
+
+.btn-redo {
+    background-color: orangered;
+    border-color: rgb(211, 30, 0);
+    box-shadow: 0 9px rgb(200, 30, 0) !important;
+    color: white;
+}
+
+.btn-redo:active {
+    box-shadow: 0 5px rgb(180, 10, 0) !important;
+}
+
+.btn-redo:hover {
+    background-color: rgb(240, 50, 0);
+    color: white;
+}
+
+.panel-voting {
+    padding: 10px;
+    display: grid;
+    grid-template-rows: .2fr .5fr .3fr;
+    grid-template-columns: .4fr .4fr .2fr;
+    grid-template-areas:
+        "head head head"
+        "labels inputs image"
+        "buttons buttons buttons"
+}
+
+.panel-voting .head {
+    grid-area: head
+}
+
+.panel-voting .labels {
+    grid-area: labels
+}
+
+.panel-voting .inputs {
+    grid-area: inputs
+}
+
+.panel-voting .image {
+    grid-area: image;
+}
+
+.panel-voting .buttons {
+    grid-area: buttons
+}
+
+.panel-voting .labels span {
+    margin: 3px 0;
+}
+
+.panel-voting .labels span, .panel-voting .inputs span {
+    display: block;
+}
+
+.panel-voting .inputs input {
+    width: 30px;
+    height: 24px;
+    margin: 3px 0;
+}
