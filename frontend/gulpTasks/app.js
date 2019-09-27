@@ -1,6 +1,7 @@
 const gulp = require('gulp')
 const babel = require('gulp-babel')
 const uglify = require('gulp-uglify')
+const rename = require('gulp-rename')
 const uglifycss = require('gulp-uglifycss')
 const concat = require('gulp-concat')
 const htmlmin = require('gulp-htmlmin')
@@ -25,7 +26,7 @@ gulp.task('app.js', () => {
     return gulp.src('src/js/**/*.js')
         .pipe(babel({ presets: ['env'] }))
         .pipe(uglify())
-        .pipe(concat('app.min.js'))
+        .pipe(rename({ suffix: '.min' }))
         .pipe(gulp.dest('build/js'))
 })
 
