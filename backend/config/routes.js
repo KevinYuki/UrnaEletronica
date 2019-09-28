@@ -2,6 +2,7 @@
 
 module.exports = app => {
     app.post('/insertadmin', app.api.administrador.save)
+    app.get('/infoadmin', app.api.administrador.infoAdmin)
     app.post('/signin', app.api.auth.signin)
     
     app.route('/auditoria')

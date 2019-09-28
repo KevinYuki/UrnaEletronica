@@ -22,5 +22,11 @@ module.exports = app => {
             .catch(err => res.status(500).send(err))
     }
 
-    return { save }
+    const infoAdmin = async (req, res) => {
+        const table = await app.db('admin').select('username').first()
+        if(table) return res.status(200).send(table)
+        else return res.status(200).send("not_exists")
+    }
+
+    return { save, infoAdmin }
 }
