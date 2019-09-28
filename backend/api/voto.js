@@ -15,7 +15,7 @@ module.exports = app => {
 
         let voto = {}
 
-        if(eleitor.votou === 0) {
+        if(eleitor && eleitor.votou === 0) {
            
             await app.db('eleitor')
             .where({ id: eleitor.id })

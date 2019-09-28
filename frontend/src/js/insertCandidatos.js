@@ -1,7 +1,7 @@
 // Criação dos candidatos
 const token = localStorage.getItem('token')
 
-console.log(token)
+// console.log(token)
 
 const run = localStorage.getItem('run') ? false : true
 

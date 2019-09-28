@@ -20,7 +20,7 @@ module.exports = app => {
 
     const getById = (req, res) => {
         app.db('candidato')
-            .select('num_candidato', 'nome', 'nome_sup', 'partido', 'cargo', 'cidade', 'estado')
+            .select('num_candidato', 'nome', 'nome_sup', 'partido', 'cargo', 'cidade', 'estado', 'foto')
             .where({ num_candidato: req.params.num_candidato }).first()
             .then(candidato => res.json(candidato))
             .catch(err => res.status(500).send(err))

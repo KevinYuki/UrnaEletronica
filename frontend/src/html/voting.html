@@ -26,15 +26,15 @@
         <div class="inputs">
             <input type="number" name="id_eleitor">
             <div class="numbers">
-                <input type="number" name="number_1" id="">
-                <input type="number" name="number_2" id="">
+                <input type="number" name="number_1">
+                <input type="number" name="number_2">
             </div>
-            <span>Fulano</span>
-            <span>PF</span>
-            <span>Ciclano</span>
+            <span id="nome"></span>
+            <span id="partido"></span>
+            <span id="sup"></span>
         </div>
         <div class="image">
-            <img src="../img/president_icon.jpg" class="img-fluid w-75">
+            <img src="../img/president_icon.jpg" class="img-fluid w-75" id="foto">
         </div>
         <div class="buttons d-flex justify-content-around">
             <input type="button" class="btn btn-white" value="Branco">
@@ -42,6 +42,9 @@
             <input type="button" class="btn btn-success" value="Confirma">
         </div>
     </div>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/axios.min.js"></script>
+    <script src="../js/voting.min.js"></script>
 </body>
 
 </html>
