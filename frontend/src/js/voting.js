@@ -52,8 +52,8 @@ const cycle = setInterval(() => {
         if(num1 !== "" && num2 !== "") {
             const num_candidato = parseInt(num1.toString() + num2.toString())
 
-            document.querySelector('input[name=number_1]').disabled = false
-            document.querySelector('input[name=number_2]').disabled = false
+            document.querySelector('input[name=number_1]').disabled = true
+            document.querySelector('input[name=number_2]').disabled = true
 
             axios.get(`http://localhost:4000/candidatos/${num_candidato}`,
                 {

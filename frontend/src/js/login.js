@@ -1,3 +1,5 @@
+localStorage.clear()
+
 axios.get('http://localhost:4000/infoadmin')
     .then(resp => {
         if(!resp.data.username) {
