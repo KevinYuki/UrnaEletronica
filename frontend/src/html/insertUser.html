@@ -13,8 +13,30 @@
 
 <body class="bg-light">
     <div class="panel panel-user">
-        <div class="head text-center my-5">
+        <div class="head text-center mt-2">
             <h1 class="h2">Cadastre seus eleitores aqui!</h1>
+        </div>
+        <div class="inputs mx-5 px-5 d-flex flex-column justify-content-around">
+            <div class="cpf d-flex justify-content-between my-1">
+                <label for="cpf">CPF: </label>
+                <input type="text" class="w-75" name="cpf">
+            </div>
+            <div class="nome d-flex justify-content-between my-1">
+                <label for="nome">Nome: </label>
+                <input type="text" class="w-75" name="nome">
+            </div>
+            <div class="cidade d-flex justify-content-between my-1">
+                <label for="cidade">Cidade: </label>
+                <input type="text" class="w-75" name="cidade">
+            </div>
+            <div class="estado d-flex justify-content-between my-1">
+                <label for="estado">Estado: </label>
+                <input type="text" class="w-75" name="estado">
+            </div>
+        </div>
+        <div class="buttons d-flex justify-content-around mt-2">
+            <input type="button" value="Cadastrar" class="btn btn-success">
+            <input type="button" value="Retornar" class="btn btn-white">
         </div>
     </div>
 </body>
