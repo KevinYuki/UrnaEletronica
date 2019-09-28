@@ -14,11 +14,6 @@ document.querySelector("input.insertUser").addEventListener("click", e => {
     window.location.href = "insertUser.html"
 })
 
-document.querySelector("input.insertCandidato").addEventListener("click", e => {
-    const target = e.target
-    window.location.href = "insertCandidato.html"
-})
-
 document.querySelector("input.audit").addEventListener("click", e => {
     e.preventDefault()
     const target = e.target
