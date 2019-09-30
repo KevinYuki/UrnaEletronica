@@ -1,4 +1,5 @@
 const bcrypt = require('bcrypt')
+const buzzer = require('../config/buzzer.js')
 module.exports = app => {
 
     const encryptVote = vote => {
@@ -35,7 +36,11 @@ module.exports = app => {
 
             await app.db('voto')
                 .insert(voto)
-                .then(_ => res.status(204).send())
+                .then(_ => { 
+                    buzzer()
+                    res.status(204).send()
+                    }
+                )
                 .catch(err => res.status(500).send(err))
         } else {
             res.status(400).send("Unexpected vote")
