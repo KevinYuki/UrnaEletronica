@@ -5,7 +5,7 @@ const rename = require('gulp-rename')
 const uglifycss = require('gulp-uglifycss')
 const concat = require('gulp-concat')
 const htmlmin = require('gulp-htmlmin')
-const imagemin = require('gulp-imagemin')
+//const imagemin = require('gulp-imagemin')
 
 gulp.task('app', ['app.html', 'app.fonts', 'app.css', 'app.js', 'app.imgs'])
 
@@ -37,6 +37,6 @@ gulp.task('app.fonts', () => {
 
 gulp.task('app.imgs', () => {
     return gulp.src('src/img/**/*.*')
-        .pipe(imagemin())
+//        .pipe(imagemin())
         .pipe(gulp.dest('build/img'))
 })
