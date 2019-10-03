@@ -26,7 +26,7 @@ Urna projetada utilizando as tecnologias GPIO, banco de dados SQLite3 e JavaScri
 ```npm start```
 
 # Dependências
-## Frontend
+### Frontend
 * Axios v0.19.0
 * Babel-core v6.26.3
 * Bootstrap v4.3.1
@@ -34,7 +34,7 @@ Urna projetada utilizando as tecnologias GPIO, banco de dados SQLite3 e JavaScri
 * jQuery 3.3.1
 * Run-sequence v2.2.1
 
-## Backend
+### Backend
 * Nodemon v1.19.2
 * Bcrypt v3.0.6
 * Body-parser v1.19.0
