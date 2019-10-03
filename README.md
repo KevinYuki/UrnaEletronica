@@ -11,14 +11,14 @@ Urna projetada utilizando as tecnologias GPIO, banco de dados SQLite3 e JavaScri
 
 # Inicialização
 
-## Frontend 
+### Frontend 
 ```cd frontend/``` 
 
 ```npm install```
 
 ```npm start```
 
-## Backend
+### Backend
 ```cd backend/```
 
 ```npm install```
