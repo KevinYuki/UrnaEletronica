@@ -1,33 +1,42 @@
-const wpi = require('wiringpi-node')
+const Gpio = require('pigpio').Gpio;
 
 module.exports = () => {
-
-	wpi.setup("gpio")
-
-	wpi.pinMode(12, wpi.OUTPUT)
-
-	wpi.softToneCreate(12)
-
-	//wpi.digitalWrite(12, wpi.HIGH)
-	//wpi.delay(1000)
-	wpi.softToneWrite(12, 2600)
-	wpi.delay(100)
-	wpi.softToneWrite(12, 2200)
-	wpi.delay(100)
-	wpi.softToneWrite(12, 2600)
-	wpi.delay(100)
-	wpi.softToneWrite(12, 2200)
-	wpi.delay(100)
-	wpi.softToneWrite(12, 2600)
-	wpi.delay(100)
-	wpi.softToneWrite(12, 2200)
-	wpi.delay(100)
-	wpi.softToneWrite(12, 2600)
-	wpi.delay(100)
-	wpi.softToneWrite(12, 2200)
-	wpi.delay(100)
-	wpi.softToneWrite(12, 2600)
-	wpi.delay(500)
-	wpi.softToneWrite(12,0)
-//wpi.digitalWrite(12, wpi.LOW)
+	const buzzer = new Gpio(12, {mode: Gpio.OUTPUT})
+	function sleep(milliseconds) {
+	  var start = new Date().getTime();
+	  for (var i = 0; i < 1e7; i++) {
+		if ((new Date().getTime() - start) > milliseconds){
+		  break;
+		}
+	  }
 	}
+
+
+	buzzer.pwmWrite(180)
+	sleep(100)
+	buzzer.pwmWrite(60)
+	sleep(100)
+	buzzer.pwmWrite(180)
+	sleep(100)
+	buzzer.pwmWrite(60)
+	sleep(100)
+	buzzer.pwmWrite(180)
+	sleep(100)
+	buzzer.pwmWrite(60)
+	sleep(100)
+	buzzer.pwmWrite(180)
+	sleep(100)
+	buzzer.pwmWrite(60)
+	sleep(100)
+	buzzer.pwmWrite(180)
+	sleep(100)
+	buzzer.pwmWrite(60)
+	sleep(100)
+	buzzer.pwmWrite(180)
+	sleep(100)
+	buzzer.pwmWrite(60)
+	sleep(100)
+	buzzer.pwmWrite(180)
+	sleep(100)
+	buzzer.pwmWrite(0)
+}
